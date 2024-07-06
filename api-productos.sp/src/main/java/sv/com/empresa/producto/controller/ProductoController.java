@@ -120,8 +120,8 @@ public class ProductoController {
 			return ResponseEntity.internalServerError().build();
 		}
 	}
-	@DeleteMapping(path = "/eliminar-por-id", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> eliminar(@RequestParam String idProducto) {
+	@DeleteMapping(path = "/eliminar-por-id/{idProducto}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> eliminar(@PathVariable("idProducto") String idProducto) {
 		Map<String, Object> response = new HashMap<>();
 
 		Integer id = Integer.parseInt(idProducto);

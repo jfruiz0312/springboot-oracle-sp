@@ -138,7 +138,7 @@ public class ProductoRepositoyImpl implements ProductoRepository{
 		boolean sw = false;
 
 		try {
-			StoredProcedureQuery spq = entityManager.createNamedStoredProcedureQuery("producto.eleminar");
+			StoredProcedureQuery spq = entityManager.createNamedStoredProcedureQuery("producto.eliminar");
 		
 			spq.setParameter("P_ID_PRODUCTO", productoId);
 			
